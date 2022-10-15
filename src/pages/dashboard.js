@@ -70,9 +70,11 @@ class Dashboard extends Component {
             CRUDForJSON('delete', this.state.idForDelete);
             this.setState({ idForDelete: -1 })
             this.props.history.push('/dashboard')
+            this.setState({selectedRow:null})
         }
         else {
             this.props.setDeleteModalVisible(!this.state.deleteModalIsOpen)
+            this.setState({selectedRow:null})
         }
 
     }
